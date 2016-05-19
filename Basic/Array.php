@@ -64,7 +64,7 @@ $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
 echo "Peter is " . $age['Peter'] . " years old.";
 
 //遍历关联数组
-//遍历并打印关联数组中的所有值，您可以使用 foreach 循环，如下所示
+//遍历并打印关联数组中的所有值，您可以使用 foreach 循环，如下
 
 $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
 
