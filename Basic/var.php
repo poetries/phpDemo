@@ -26,55 +26,55 @@ PHP 是一门弱类型语言
  */
 
 
-//$x = 5;
-//$y = 6;
-//$z = $x + $y;
-//echo $z;
-//echo "<br>";
-//
-////全局变量与局部变量
-//
-//$s = 40;//全局变量
-//
-//function test()
-//{
-//    $y = 50;
-//    echo "$y";
-//    echo "<br>";
-//    //echo "$s";//error  如果要在一个函数中访问一个全局变量，需要使用 global 关键字
-//    global $s;
-//    echo "$s";
-//
-//}
-//test();
-//
-////PHP global 关键字
-//
-//$x=5;
-//$y=10;
-//
-//function myTest()
-//{
-//    global $x,$y;
-//    $y=$x+$y;
-//}
-//
-//myTest();
-//echo $y; // 输出 15
-//
-////PHP 将所有全局变量存储在一个名为 $GLOBALS[index] 的数组中。 index 保存变量的名称。这个数组可以在函数内部访问，
-////也可以直接用来更新全局变量。上面的实例可以写成这样：
-//
-//$x=5;
-//$y=10;
-//
-//function myTest()
-//{
-//    $GLOBALS['y']=$GLOBALS['x']+$GLOBALS['y'];
-//}
-//
-//myTest();
-//echo $y;
+$x = 5;
+$y = 6;
+$z = $x + $y;
+echo $z;
+echo "<br>";
+
+//全局变量与局部变量
+
+$s = 40;//全局变量
+
+function test()
+{
+    $y = 50;
+    echo "$y";
+    echo "<br>";
+    //echo "$s";//error  如果要在一个函数中访问一个全局变量，需要使用 global 关键字
+    global $s;
+    echo "$s";
+
+}
+test();
+
+//PHP global 关键字
+
+$x=5;
+$y=10;
+
+function myTest()
+{
+    global $x,$y;
+    $y=$x+$y;
+}
+
+myTest();
+echo $y; // 输出 15
+
+//PHP 将所有全局变量存储在一个名为 $GLOBALS[index] 的数组中。 index 保存变量的名称。这个数组可以在函数内部访问，
+//也可以直接用来更新全局变量。上面的实例可以写成这样：
+
+$x=5;
+$y=10;
+
+function myTest()
+{
+    $GLOBALS['y']=$GLOBALS['x']+$GLOBALS['y'];
+}
+
+myTest();
+echo $y;
 
 
 //Static 作用域
