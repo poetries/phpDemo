@@ -1,5 +1,5 @@
 
-/*mysql入门10条语句
+/*  mysql入门10条语句
 
 1、链接到数据库服务器
 mysql -h 地址 -u root -p 密码
