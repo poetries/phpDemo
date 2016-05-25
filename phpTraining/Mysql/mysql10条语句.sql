@@ -1,10 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: poerty
- * Date: 2016/5/23
- * Time: 23:58
- */
 
 /*mysql入门10条语句
 
@@ -40,5 +33,5 @@ select * from msg;
 select * from where id = 2...
 
 10、快速清空表
-truncate 表名*/
+truncate 表名
 

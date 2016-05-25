@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: poerty
- * Date: 2016/5/24
- * Time: 0:10
- */
+
 /*
 1:mysql是什么
 答：mysql是一种开源的，小型的数据库
