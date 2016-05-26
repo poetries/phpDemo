@@ -2,5 +2,5 @@
 <today>
     <lianying>今天心情不错</lianying>
     <tomarrow>明天要做好多事情</tomarrow>
-
+<!--通过xml来获取信息，只关心数据，不再受外观样式的影响-->
 </today>
