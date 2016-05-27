@@ -25,7 +25,7 @@ $api = 'http://api.tudou.com/v3/gw?method=item.info.get&appKey='.$key.'&format=x
     当前，暂时不用xml解析，用字符串来操作得到地址
 
 */
-用php中的字符串函数strsub  strpos
+//用php中的字符串函数strsub  strpos
 $source = file_get_contents($api);
 $start = strpos($source,'<html5Url>');
 $end = strpos($source,'</html5Url>');
