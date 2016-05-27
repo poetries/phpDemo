@@ -64,8 +64,25 @@
 8.1 在xml里面一切皆是节点，包括换行符，空白符
 包括注释也是节点
 
+三、xml的DOM解析（xml文档是一颗倒过来的树的结构）
 
-   -->
+xml是一种严格的文档格式，有其自身标准解析xml，就做DOM标准
+我们使用的HTML xml都遵循DOM标准
+
+无论是php java c js解析DOM 都遵循同样的标准
+
+如何通过php的DOM树对象来解析xml
+
+1、要把xml文件读入进来，形成一个xml文档对象（对应js中的document对象）
+2、再通过getElementsByTagName(标签名)得到一组节点（对应js中的document.getElementsByTagName）
+3、取2中得到的对象中的某一个，得到具体的节点
+
+xml解析步骤：面--串--点
+面：$dom->load('xml文件路径'）//得到面
+串（节点列表）：$dom->getElementsByTagName('节点名')//得到串
+点：$chuan->item(N);//得到点节点
+
+        -->
 
 
 

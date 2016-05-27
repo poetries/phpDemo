@@ -15,7 +15,7 @@ $api = 'http://api.tudou.com/v3/gw?method=item.info.get&appKey='.$key.'&format=x
 //echo $api;
 }
 
-//echo $pai;
+//echo $api;
 /**
     echo $pai得到的是一个xml文档，内容是视频的标题，时长，封面等信息
     接下来要做的是用php把xml的各节点信息解析出来
@@ -30,7 +30,7 @@ $source = file_get_contents($api);
 $start = strpos($source,'<html5Url>');
 $end = strpos($source,'</html5Url>');
 $noad = substr($source,$start,$end-$start);
-echo $noad;
+//echo $noad;
 
 ?>
 <!DOCTYPE html>
@@ -43,12 +43,12 @@ echo $noad;
 <h1>这个地址需要chrome、火狐浏览器才能看</h1>
 <form method="post">
     <p>
-        <input type="text" name="tudou">
+       土豆地址: <input type="text" name="tudou">
     </p>
     <p><input type="submit" value="获取地址"></p>
 </form>
-<p>
-    无广告地址：<?php echo $noad;?>
-</p>
+    <p>
+        无广告地址:
+    </p>
 </body>
 </html>
