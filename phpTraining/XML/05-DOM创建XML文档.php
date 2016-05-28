@@ -56,7 +56,7 @@ $cdata = $dom->createCDATASection('天龙八部是部好书');
 $intro = $dom->createElement('intro');
 
 //6、把ctata加点放入intro中
-$intro->childNodes($cdata);
+$intro->appendChild($cdata);
 
 //7、创建goods节点
 $goods = $dom->createElement('goods');
@@ -85,4 +85,9 @@ $dom->appendChild($appstore);
 //最后想输出 保存都行
 
 //输出
-echo $dom->saveXML();//直接输出
+header('content-type:text/xml');
+echo $dom->savexml();//直接输出
+
+//保存
+
+//echo $dom->save('06.xml')?'OK':'FAIL';
