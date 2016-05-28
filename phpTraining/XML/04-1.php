@@ -36,7 +36,7 @@ $ts = $dom->getElementsByTagName('title');
 /*echo '我们得到了',$ts->length,'个书名<br>';
 echo '第一个节点是';print_r($ts->item(0));*/
 
-//'天龙八部'是一个文本节点是title的子节点
+//'天龙八部'是一个文本节点是title的子节点\
 $title0 = $ts->item(0);//item 列表对象
 print_r($title0->childNodes);//打印结果是一个列表对象(子节点列表)
 echo $title0->childNodes->length,'个子节点','<br>';
@@ -51,6 +51,7 @@ echo $dom->getElementsByTagName('title')->item(0)->childNodes->item(0)->wholeTex
 echo $dom->getElementsByTagName('title')->item(1)->childNodes->item(0)->wholeText;//连城诀
 //或者：下面的方法偷懒
 echo $dom->getElementsByTagName('title')->item(1)->nodeValue;//连城诀
+
 
 ?>
 </body>
