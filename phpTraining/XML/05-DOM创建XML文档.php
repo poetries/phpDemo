@@ -91,3 +91,7 @@ echo $dom->savexml();//直接输出
 //保存
 
 //echo $dom->save('06.xml')?'OK':'FAIL';
+
+
+
+?>
