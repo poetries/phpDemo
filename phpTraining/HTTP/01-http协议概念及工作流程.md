@@ -24,10 +24,12 @@
 - 所用协议：目前一般是HTTP/1.1 ,0.9\1.0已经不用
 
 
-#### 用GET方法完成HTTP协议的请求
+#### GET方法完成HTTP协议的请求
+
 ![](./images/01.png)
 
-#### 用POST方法完成HTTP协议的请求
+#### POST方法完成HTTP协议的请求
+
 ![](./images/02-1.png)
 ![](./images/02.png)
 
