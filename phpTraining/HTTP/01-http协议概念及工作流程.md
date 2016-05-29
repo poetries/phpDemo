@@ -27,6 +27,8 @@
 #### 用GET方法完成HTTP协议的请求
 ![](./images/01.png)
 
-
+#### 用POST方法完成HTTP协议的请求
+![](./images/02-1.png)
+![](./images/02.png)
 
 
