@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>自增自减运算符</title>
+	<script type="text/javascript">
+		/**
+		 * @Author:     poetries
+		 * @DateTime:	2016-06-03 20:14:58
+		 */
+		
+		 function add(){
+		 	var age = document.getElementById('ag').value;
+		 	age = parseInt(age);//把age字符串分析成整型处理
+		 	age +=1; //在js中+号有两个作用 用于运算  用于连接字符（+号碰到字符串当做连接用）要当成数字用  要转成数字
+		 	document.getElementById('ag').value = age;
+		 }
+
+	</script>
+</head>
+<body>
+
+<input type="text" name="age" id="ag" value="0">
+<input type="button" value="长大" onclick="add();" />
+	
+</body>
+</html>
