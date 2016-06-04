@@ -31,7 +31,8 @@ var stu = {name:'张三',age:20,talk:function (){alert('哈哈哈');}};
  	*/
  
  //写法2
-
+ 
+/*
 var zhang = {name:'张三',age:20,talk:null};
 var lisi = {name:'李四',age:22,talk:null};
 
@@ -45,6 +46,24 @@ zhang.talk(zhang.name);
 
 lisi.talk = t;
 lisi.talk(lisi.name);
+
+*/
+
+//写法3
+
+var zhang = {name:'张三',age:20,talk:null};
+var lisi = {name:'李四',age:22,talk:null};
+
+
+function t(){
+	alert('你好'+this.name);//this指向当前正在调用这个方法的对象
+}
+
+zhang.talk = t;
+zhang.talk();
+
+lisi.talk = t;
+lisi.talk();
 
 
 
