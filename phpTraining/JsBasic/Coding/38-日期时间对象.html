@@ -25,11 +25,13 @@
  * getSeconds()  返回秒数  0-59
  * getMilliseconds() 返回毫秒数0-999
  *
+ *
+ * 
  * 
  */
 
 
- 	var time = new Date();
+/* 	var time = new Date();
 	alert(time.getYear());//116
 	alert(time.getFullYear());//2016
 	alert(time.getMonth());//5
@@ -38,7 +40,24 @@
 	alert(time.getHours());//1
 	alert(time.getSeconds());//17
 	alert(time.getMinutes());//20
-	alert(time.getMilliseconds());
+	alert(time.getMilliseconds());*/
+
+
+	function t(){
+
+		//把年月日 拼接起来
+		var time = new Date();
+		var year = time.getFullYear();
+		var month = time.getMonth();
+		var day = time.getDate();
+		var hour = time.getHours();
+		var minute = time.getMinutes();
+		var second = time.getSeconds();
+
+		document.write(year+"&nbsp;"+month+"&nbsp;"+day+"&nbsp;"+hour+":"+minute+":"+second+'<br>');
+	}
+	var clock = setInterval('t()',1000);
+
 
 	</script>
 </head>
