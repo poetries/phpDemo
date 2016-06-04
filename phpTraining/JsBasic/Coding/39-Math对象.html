@@ -21,13 +21,28 @@
  * sqrt(数值)  开平方根
  * 
  */
-var 5*Math.random()<tt<Math.random()*10;
+/*
+
+/*
 for (var i = 0; i < 20; i++) {
-document.write(Math.random()*10+'<br>');//0-10之间的随机
+document.write(5+Math.random()*5+'<br>');//5-10之间的随机
 }
 
 alert(Math.round(3.6658));//4
 alert(Math.sqrt(2));//1.4
+
+*/
+	//输入任意两个数字 返回两个数之间的随机数
+	function rd(x,y){
+		document.write(x+Math.random()*y+'<br>');
+	}
+
+	var x = parseInt(prompt('请输入第一个数字:'));
+	var y = parseInt(prompt('请输入第二个数字:'));
+
+	rd(x,y);
+
+
 
 	</script>
 </head>
