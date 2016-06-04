@@ -10,7 +10,12 @@
  */
 
 /**
- * 
+ * 数组length属性的变化：
+ *
+ * 设某数组length = N
+ * 如果修改length 且length<N 则数组被截断 数据丢失
+ *
+ * 如果：length>N 数组自动补到length个 新添加的元素以undefined来填充
  */
 
 var arr = ['a','b','c','d','e','f','g','h','i'];
