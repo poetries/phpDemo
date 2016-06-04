@@ -7,6 +7,12 @@
 		 * @Author:     poetries
 		 * @DateTime:	2016-06-04 11:23:20
 		 */
+		/**
+		 * 思路：
+		 * 1、先把所有的多选框对象找到 放到数组里面
+		 * 2、获取数组的长度 for循环数组
+		 * 3、每循环一次 checked = 'checked';
+		 */
 		
 
 		//粗劣写法
@@ -58,7 +64,7 @@
 		//反选
 		 function fanAll(){
 		 	for (var i = 0,s = document.getElementsByName('hobby'),len = s.length; i<len; i++) {
-		 		if (document.getElementsByName('hobby')[i].checked) {
+		 		if (s[i].checked) {
 		 			s[i].checked = false;
 		 		}else{
 		 			s[i].checked = "checked";
