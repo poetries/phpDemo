@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>42-根据父子元素-兄弟元素的关系在定位</title>
+
+</head>
+<body>
+	<div>第0个</div>
+	<div>第0个
+		<ul id="season">
+			<li>春</li>
+			<li>夏</li>
+			<li>秋</li>
+			<li>冬</li>
+		</ul>
+	</div>
+	<div>第2个</div>
+	<div>第3个</div>
+	<div>第4个</div>
+    <p>
+        <input type="button" value="父元素" onclick="t1();" />
+    </p>
+
+    <p>
+        <input type="button" value="ById结合子元素" onclick="t2();" />
+    </p>
+    <p>
+        <input type="button" value="ByName" onclick="t3();" />
+    </p>
+
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-05 11:15:39
+ */
+
+	function t1(){
+		var uls = document.getElementById('season');
+		// alert(uls.parentNode);
+		uls.parentNode.style.background = 'red';
+	}
+
+
+	</script>
+
+</body>
+</html>
