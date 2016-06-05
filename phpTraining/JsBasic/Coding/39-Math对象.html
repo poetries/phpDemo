@@ -32,19 +32,36 @@ alert(Math.round(3.6658));//4
 alert(Math.sqrt(2));//1.4
 
 */
-	//输入任意两个数字 返回两个数之间的随机数
-	function rd(x,y){
-		document.write(x+Math.random()*y+'<br>');
-	}
+	
+	var big = parseInt(prompt('请输入第一个数字:'));
+	var small = parseInt(prompt('请输入第二个数字:'));
 
+	//输入任意两个数字 返回两个数之间的随机数
+/*	function rd(big,small){
+		return Math.random()*(big-small)+small;
+
+	}
+	for(var i = 0; i < 10; i++) {
+		document.write(rd(big,small)+'<br>');
+	}
+*/
+
+
+	//输入任意两个数字 返回两个数之间的随机数的整数 
+	function rd(big,small){
+		return Math.ceil(Math.random()*(big-small))+small;
+
+	}
+	for(var i = 0; i < 30; i++) {
+		document.write(rd(big,small)+'<br>');
+	}
 	//javascript中prompt方法可以让用户输入一个文本，从而作为返回值 prompt返回的是字符串类型
 	//需要用到parseInt 转成数字型  比如：输入12  实际返回的是'12'
 	//alert(typeof(window.prompt()));//string
 
-	var x = parseInt(prompt('请输入第一个数字:'));
-	var y = parseInt(prompt('请输入第二个数字:'));
 
-	rd(x,y);
+
+
 
 
 

@@ -173,7 +173,12 @@ img {
                  	var mleft = document.getElementById('mleft');
                  	// alert(mleft.childNodes.length);//9  空白文本也是的当成文本节点来算  childNodes是w3c的标准写法
                  	//还可以这样写 children不是w3c标准 但是各大浏览器兼容性很好
-                 	alert(mleft.children.length);//4
+                 	//alert(mleft.children.length);//4
+                 	//mleft.firstChild.nextSibling.style.background = 'red';//这里需要注意 firstChild没有发挥作用 因为第一个子元素理解成空格处理 
+                 	
+                 //这个推荐使用children 来处理空白节点
+                 mleft.children[0].style.background = 'red';
+
                  
 				}
 

@@ -51,6 +51,24 @@
  *
  * 答案：childNodes/child
  *
+ *继续查找：
+ * 
+ * 			1、查找子元素
+ * 			children[index]/childNodes
+ * 			
+ * 			2、查找父元素
+ * 			node.parentNode -->获取父元素
+ * 			
+ * 			3、查找兄弟元素
+ * 			nextSibling previousSibling
+ * 			
+ * 			4、nextSibling previousSibling firstChild lastChild 这四个属性容易受到空白文白的影响 建议不用
+ 
+ * 			5、对于查到的某个元素里面的子元素非常多 这时候还可利用getElementsByTagname进一步筛选
+ * 			注意：对于元素对象和document对象相比 元素对象只能利用getElementsByTagName函数 其他两个不能用
+ *
+ * 
+ * 
  * 
  * 
  * 节点查找也是通过由大到小来定位：找到大的元素进一步细化 完全可以找到页面上任意一个元素控制他  
@@ -72,7 +90,7 @@
  * 		nextSibling
  * 		previousSibling
  *
- * 		children[] children不是w3c标准 但是各大浏览器兼容性很好
+ * 		children[index] children不是w3c标准 但是各大浏览器兼容性很好
  * 		
  * 
  *
