@@ -42,6 +42,15 @@
 	alert(time.getMinutes());//20
 	alert(time.getMilliseconds());*/
 
+
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="clock">
+</body>
+<script type="text/javascript">
+
 	//页面上动态时钟
 	function t(){
 
@@ -54,14 +63,10 @@
 		var minute = time.getMinutes();
 		var second = time.getSeconds();
 
-		document.write(year+"&nbsp;"+month+"&nbsp;"+day+"&nbsp;"+hour+":"+minute+":"+second+'<br>');
+		document.getElementById('clock').value = (year+" "+month+" "+day+" "+hour+":"+minute+":"+second);
 	}
+	// document.getElementById('clock').value = t();  //error
 	var clock = setInterval('t()',1000);
 
-
-	</script>
-</head>
-<body>
-	
-</body>
+</script>
 </html>
