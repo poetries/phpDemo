@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<title>五子棋开发过程.</title>
 		<style type="text/css">
-		body{
+	body{
 			background: green;
 		}
 	#container{
@@ -18,8 +18,10 @@
 
 		border-collapse: collapse;
 		width: 525px;
-		height: 525px;
+		height: 525px;	
+
 	}
+
 
 	</style>
 
@@ -34,7 +36,7 @@ var curr = 'black';//声明全局变量
 function init(){
 	  for(var i = 0,tds=document.getElementsByTagName('td'),len = tds.length; i <len ; i++) {
  	 	tds[i].onclick = xia;
- 	 	tds[i].qi = 0;
+ 	 	tds[i].qi = false;//给棋子加一个属性  默认false
  	 }
 
 }
@@ -48,9 +50,16 @@ function init(){
             return;
         }
 
-        this.style.background = 'url(images/' + curr + '.gif)';//初始化为黑棋
-        this.qi = curr == 'black'?'b':'w';
-        curr = curr == 'black'?'white':'black';
+        this.style.background = 'url(images/' + curr + '.gif)';
+        this.qi = curr == 'black'?'b':'w';//这里的b w仅仅是为了标记 标记是否已经下过棋子了 返回b 或w给48行
+        // curr = curr == 'black'?'white':'black';//三元运算符 表达式1？表达式2：表达式3（表达式1为真返回表达式2 为假返回表达式3==返回的值赋给一个变量）
+
+        //写法2  对三元运算符不熟悉 可以if.else
+        if(curr == 'black'){
+        	curr = 'white';
+        }else{
+        	curr = 'black';
+        }
 
 
 	// 不能这样写
