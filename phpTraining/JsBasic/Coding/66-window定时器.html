@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>66-window定时器</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 13:09:35
+ */
+/**
+ *66-window定时器:
+ *
+ * setIntval(表达式,毫秒)
+ * clearIntval(定时器对象)
+ * setTimeout(表达式,毫秒)
+ * clearTimeout(定时器对象)
+ *
+ *
+ * setTimeout(表达式,毫秒)：是指经过指定时间后执行事件一次
+ * 
+ */
+
+//定一段时间后执行某一个函数
+
+	function t(){
+		alert('10秒到');
+		window.location.href = 'http:///www.baidu.com';
+	}
+
+	window.setTimeout('t()',10*1000);//setTimeout只是执行一次
+
+	//用setTimeout来实现每隔5秒执行某一个一次
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
