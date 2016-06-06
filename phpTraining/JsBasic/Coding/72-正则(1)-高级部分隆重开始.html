@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>正则(1)-高级部分隆重开始</title>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-06 23:21:06
+ */
+/**
+ * 正则表达式：
+ *
+ * 正则表达式的web常见场合：
+ * 1、邮箱验证
+ * 2、用户名验证
+ * 3、替换字符串某一部分
+ * 4、信息采集 用来分析有效的代码段
+ *
+ *
+ * 正则表达式（规则表达式）：express regulation
+ *
+ * 一种有规律的字符串的描述
+ *
+ *正则表达式是一门独立的的知识 同样的一段描述 比如，对于email的匹配表达式，在不同语言是一样的 但是 调用的函数可能不一样
+ *
+ * 学习正则表达式：
+ * 1、在js里面如何写正则表达式：/正则/
+ *
+ * 2、在js里面用正则表达式来验证字符换是否满足 可以用reg.test(String)
+ * 
+ *
+ * 正则表达式3句话：
+ *
+ * 1、要找什么字符
+ * 2、从哪里找
+ * 3、找几个
+ *
+ *
+ * 要找什么字符？
+ * 字面值 比如：hi就是找hi
+ * 字符的集合
+ * 
+ */
+
+function t1(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /hi/;//仅仅是看字符串中有没有hi
+	alert(reg.test(cv));//满足 返回true  不满足 返回false
+
+}
+function t2(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\bhi\b/;//正则测试单词hi
+	alert(reg.test(cv));//满足 返回true  不满足 返回false
+
+}
+function t3(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = /\bhi\b/;//正则测试hi开头的单词但不是hi
+	alert(reg.test(cv));//满足 返回true  不满足 返回false
+
+} 
+
+	</script>
+	<style type="text/css">
+		textarea{
+			width: 400px;
+			height: 200px; 
+		}
+	</style>
+</head>
+<body>
+	<textarea id='cont'></textarea>
+	<p><input type="button" value="匹配hi" onclick="t1();"></p>
+	<p><input type="button" value="正匹配单词hi" onclick="t2();"></p>
+	<p><input type="button" value="匹配hi开头的单词但不是hi" onclick="t3();"></p>
+</body>
+</html>
