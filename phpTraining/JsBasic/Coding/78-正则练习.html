@@ -38,11 +38,21 @@ function t3(){
 	var cont = document.getElementById('cont');
 	var cv = cont.value;
 
-	var reg = //;//统一空格
-
-	alert(cv.match(reg));//
+	var reg = /[ \t\u3000]+/g;//找空白符  第一个是半角的空格  \s包含所有空白符  \u3000表示 全角空格的16进制Unicode编码
+	alert(cv.replace(reg,','));//
 
 }
+
+function t4(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+	var reg = //;//
+
+	alert(cv.replace(reg,','));
+
+}
+
 
 
 	</script>
@@ -57,8 +67,12 @@ function t3(){
 <body>
 	<textarea id='cont'></textarea>
 	<p><input type="button" value="1-找首尾相同的单词" onclick="t1();"></p>
-	<p><input type="button" value="1-手机号第4位到第七位换成*" onclick="t2();"></p>
-	<p><input type="button" value="1-统一空格" onclick="t3();"></p>
+	<p><input type="button" value="2-手机号第4位到第七位换成*" onclick="t2();"></p>
+	<p><input type="button" value="3-统一空格" onclick="t3();"></p>
+	<p><input type="button" value="4-把名字中的,去掉" onclick="t4();"></p>
+
+  
+
 
 </body>
 </html>
