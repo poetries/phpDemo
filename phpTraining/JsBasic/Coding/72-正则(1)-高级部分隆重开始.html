@@ -60,9 +60,14 @@
  * *表示匹配0-无穷  +表示匹配1-无穷
  *
  * 
- * 2 、从哪里找？
+ * 2 、从哪里找,找到哪？
+ * 
  * 2.1 \b 单词边界  \bhi 从单词边界开始匹配hi
- *
+ *2.2 \B 单词的非边界 把单词的中间某一部分取出来  把中间含有hi的单词取出来 即hi不能再两端
+ * 	
+ *2.3  ^ 从字符串的起始位置开始匹配
+ *2.4 $ 匹配到字符串的额结束位置
+ * 
  * 
  * 
  */
@@ -92,6 +97,7 @@ function t3(){
 
 } 
 
+
 	</script>
 	<style type="text/css">
 		textarea{
@@ -105,5 +111,6 @@ function t3(){
 	<p><input type="button" value="匹配hi" onclick="t1();"></p>
 	<p><input type="button" value="正匹配单词hi" onclick="t2();"></p>
 	<p><input type="button" value="匹配hi开头的单词但不是hi" onclick="t3();"></p>
+	
 </body>
 </html>
