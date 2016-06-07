@@ -65,7 +65,14 @@ function t6(){
 	alert(cv.replace(reg,'#'));
 
 }
+function t7(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
 
+	var  reg = /go{3,}?ds/;//替换goods中多余的O
+	alert(cv.replace(reg,'goods'));
+
+}
 	</script>
 	<style type="text/css">
 		textarea{
@@ -83,6 +90,7 @@ function t6(){
 	<p><input type="button" value="替换JavaScript标签" onclick="t4();"></p>
 	<p><input type="button" value="把连接换成空连接" onclick="t5();"></p>
 	<p><input type="button" value="把每一行的结尾的数字换成#" onclick="t6();"></p>
+	<p><input type="button" value="替换goods中多余的O" onclick="t7();"></p>
 
 </body>
 </html>
