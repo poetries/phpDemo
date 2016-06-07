@@ -57,18 +57,26 @@ function t4(){
 	alert('--'+cv.replace(reg,'')+'--');
 
 }
-
+//借助正则限制在一个有限范围内 防止sql注入
 function t5(){
 	var cont = document.getElementById('cont');
 	var cv = cont.value;
 
-	var reg = //; 
+	var reg = /^[\w\u4E00-\u9FA0]{4,16}$/; // \u4E00-\u9FA0 中文对应的Unicode编码 验证由字母数字下划线中文组合的4-16位用户名 
 
-	alert(cv.replace(reg));
+	alert(reg.test(cv));
 
 }
 
+function t6(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
 
+	var reg = /\w/;
+
+	alert(reg.test(cv));
+
+}
 
 
 
@@ -90,6 +98,8 @@ function t5(){
 	<p><input type="button" value="2-分析出手机号" onclick="t2();"></p>
 	<p><input type="button" value="3-验证手机号" onclick="t3();"></p>
 	<p><input type="button" value="4-去除两端空格" onclick="t4();"></p>
+	<p><input type="button" value="5-验证由字母数字下划线中文组合的4-16位用户名" onclick="t5();"></p>
+	<p><input type="button" value="6-验证邮箱" onclick="t6();"></p>
 
 </body>
 </html>
