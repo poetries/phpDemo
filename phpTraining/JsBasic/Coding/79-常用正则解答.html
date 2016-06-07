@@ -72,7 +72,7 @@ function t6(){
 	var cont = document.getElementById('cont');
 	var cv = cont.value;
 
-	var reg = /\w/;
+	var reg = /^[0-9a-zA-Z]\w*(\.[\w]+)*@[0-9a-zA-Z\-]+(\.[\w]+)+$/;
 
 	alert(reg.test(cv));
 
