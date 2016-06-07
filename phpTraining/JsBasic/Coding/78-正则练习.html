@@ -47,11 +47,21 @@ function t4(){
 	var cont = document.getElementById('cont');
 	var cv = cont.value;
 
-	var reg = //;//
+var reg = /([\u4E00-\u9FA0]),([\u4E00-\u9FA0])/g;  // 找中文用Unicode编码表的中文范围
 
 	alert(cv.replace(reg,','));
 
 }
+function t5(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
+
+var reg = //;  
+
+	alert(cv.replace(reg,','));
+
+}
+
 
 
 
@@ -70,6 +80,7 @@ function t4(){
 	<p><input type="button" value="2-手机号第4位到第七位换成*" onclick="t2();"></p>
 	<p><input type="button" value="3-统一空格" onclick="t3();"></p>
 	<p><input type="button" value="4-把名字中的,去掉" onclick="t4();"></p>
+	<p><input type="button" value="5-把aaabb换成ab" onclick="t5();"></p>
 
   
 
