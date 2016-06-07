@@ -54,10 +54,17 @@ function t5(){
       */
      
 	var reg = /<a[\s]+[\d\D]*<\/a>/; //正则替换链接
-        alert(cv.replace(reg,'<a href="#">文字</a>')); //把连接换成空连接  .点代表 任意字符 (不包括换行符)
+        alert(cv.replace(reg,'<a href="#">文字</a>')); 
 
 }
+function t6(){
+	var cont = document.getElementById('cont');
+	var cv = cont.value;
 
+	var  reg = /\d+$/gm;//把每一行的结尾的数字换成#   m 多行模式
+	alert(cv.replace(reg,'#'));
+
+}
 
 	</script>
 	<style type="text/css">
@@ -75,6 +82,7 @@ function t5(){
 	<p><input type="button" value="查找所有中间含有hi的单词，不区分大小写" onclick="t3();"></p>
 	<p><input type="button" value="替换JavaScript标签" onclick="t4();"></p>
 	<p><input type="button" value="把连接换成空连接" onclick="t5();"></p>
+	<p><input type="button" value="把每一行的结尾的数字换成#" onclick="t6();"></p>
 
 </body>
 </html>
