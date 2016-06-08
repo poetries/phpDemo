@@ -15,9 +15,31 @@
  * 行为  结构 样式分离的页面
  * 
  *
+ * 绑定事件的三种方式：
+ * 1、直接写在html标签内声明 <div id="school" onclick='t();'></div> 
+ *
+ * 这个效果等同于在点击div的时候 执行t()这一句，在全局范围内执行
+ *
+ *
+ * 2、第二种绑定方式
+ * DOM对象onclick = function(){}这种绑定是把一个DOM对象onclick属性赋值为一个函数，因此函数内部的this直接指向该DOM对象
+ *
+ * 第二种绑定事件的缺陷：
+ *
+ * 第二种绑定方式中 只能给一个时间绑定一个处理函数 即.onclick = fn1;.onclick = fn2  最终的效果是onclick = fn2;
+ *
+ *
+ * 如果用函数来调用其它函数的形式
+ * 例如：onclick = function (){fn1(),fn2()}那么此时 fn1,fn2中的this又指向window
+ *
+ * 第三种绑定方式：
+ *
+ * 如何绑定多个函数 并让this指向DOM对象[重点]
+ *
+ * 
  * 
  */
-
+var str = 'xixi';
 	window.onload = function(){
 		document.getElementById('school').onclick = 	function  t(){
 		alert('哈哈哈');
@@ -36,6 +58,9 @@
 
 </head>
 <body>
-	<div id="school"></div>
+<!-- 原始的绑定方式 <div id="school" onclick='t();'></div> -->
+	<div id="school">
+		
+	</div>
 </body>
 </html>
