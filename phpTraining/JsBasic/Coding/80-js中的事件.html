@@ -46,11 +46,23 @@
  *
  * 
  * 去除绑定：
- * 
+ * removeEventListener('事件',函数)
  * 
  *
+ *
+ * IE下绑定事件与解除事件的方法：
+ *
+ * attachEvent（'事件'，函数） //注意 事件要加on
+ * deltachEvent（'事件','函数'）
  * 
- * 
+ *
+ * 总结：
+ *
+ * w3c的addEventListener与IE的attachEvent()的不同：
+ * 1、函数名不同
+ * 2、事件名不同 IE要加on  w3c不加on
+ * 3、加事件后的执行顺序不同 ，w3c按绑定事件的方式的顺序来执行，而IE6,7是后绑定的事件先发生
+ * 4、this的指向，w3c中 绑定函数中的this指向DOM对象 而IE 6 7 中指向window对象 这一点比较麻烦
  * 
  */
 var str = 'xixi';
