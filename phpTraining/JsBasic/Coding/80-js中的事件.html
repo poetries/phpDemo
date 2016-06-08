@@ -63,8 +63,23 @@
  * 2、事件名不同 IE要加on  w3c不加on
  * 3、加事件后的执行顺序不同 ，w3c按绑定事件的方式的顺序来执行，而IE6,7是后绑定的事件先发生
  * 4、this的指向，w3c中 绑定函数中的this指向DOM对象 而IE 6 7 中指向window对象 这一点比较麻烦
+ *
+ *捕捉模型与冒泡模型：
+ *
+ *在w3c模型中 addEventListener支持第3个参数来声明事件的模型为冒泡还是捕捉，如果声明为false，则为冒泡方式
+ *
+ * 注意：IE的attachEvent没有第三个参数 不支持捕捉模型
+ *
+ * 事件对象的概念：（就是一个信息包）
+ * 当事件对应的函数被触发时 函数会接收到一个事件对象参数
+ * 例如 ：xx.onclick = function(ev){alert(ev)} 点击后 ev参数就代表那一瞬的各个参数 以一个对象的方式传过去
+ *
+ *对于IE 当事件发生的瞬间 事件对象赋值给window.event属性
+ * 事件的中断：
  * 
  */
+
+
 var str = 'xixi';
 	window.onload = function(){
 		document.getElementById('school').onclick = 	function  t(){
