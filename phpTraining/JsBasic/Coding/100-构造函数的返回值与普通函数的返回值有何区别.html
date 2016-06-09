@@ -43,7 +43,7 @@ function Dog(){
 //对于构造函数创建对象 遇到return返回依然成立 
 //返回值，是函数体构造出的对象，还是return value中的值  
 //答：如果return 对象/数组/函数  new表达式 返回的是return值 否则返回的是构造函数的函数体形成的新对象
-//如果通过构造器构造出的对象return值不能为 对象/数组/函数 
+//如果通过构造器构造出的对象return值不能为 对象/数组/函数   构造函数一般不用加return 会自动返回构造体
 
 var hei = new Dog();//返回对象
 console.log(hei);
