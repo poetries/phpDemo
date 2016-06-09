@@ -84,6 +84,8 @@ t();*/
  *
  * 如果var声明的变量名与形参名称一致 不产生影响 因为AO的str已经存在
  *
+ * 最后分析函数声明， function 函数名(){}//有函数名
+ *
  *
  * 
  * 
@@ -108,10 +110,35 @@ t();
 
 对上面的结果进行分析：
 
-AO：
+AO：{age:undefined} //词法分析得到
+AO：{age:99} //实参赋值 AO.age属性
+AO:{age:12}  //修改AO.age的值
 
 
 */
+
+
+function f(age,hei){
+	var age;
+	alert(age);
+	function age(){
+		alert('he');
+	}
+}
+
+//分析过程：
+//AO:{}
+//AO:{age:undefined,hei:undefined}
+//AO:{age:32,hei,undefined}
+//分析完形参 紧接着分析var age  不产生影响 因为AO的age已经存在
+//AO:{age:function(){aler..},hei:undefined}
+//执行
+//alert(age)---》AO.age---》函数
+
+//函数就是变量 函数声明就是变量声明
+/**
+ * 函数声明：假设函数名fn 函数声明会把函数赋值为AO.fn属性的值 
+ */
 
 	</script>
 </head>
