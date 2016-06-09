@@ -24,6 +24,15 @@ window.onload = function (){
 
 			tds[cnt].style.background = 'blue';
 			tds[++cnt].style.background = 'red';
+		}else if(key == 38){
+			tds[++cnt].style.background = 'yellow';
+		}else if(key == 37){
+			tds[++cnt].style.background = 'green';
+		}else if(key == 40){
+			tds[++cnt].style.background = 'black';
+		}
+		else{
+			tds[++cnt].style.background = 'white';
 		}
 	}
 }
