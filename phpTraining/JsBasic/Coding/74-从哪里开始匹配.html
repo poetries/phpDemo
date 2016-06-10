@@ -9,6 +9,7 @@
  * @DateTime:	2016-06-07 14:05:24
  */
 
+
 function t1(){
 	var cont = document.getElementById('cont');
 	var cv = cont.value;
@@ -50,7 +51,7 @@ function t5(){
 	var reg = /\bun[\w]+\b/;//匹配un前缀的反义词
 	alert(reg.exec(cv));
 
-} 
+}
 
 function t6(){
 	var cont = document.getElementById('cont');
@@ -59,7 +60,7 @@ function t6(){
 	var reg = /\Bhi\B/;//匹配单词中间的hi部分
 	alert(reg.exec(cv));
 
-} 
+}
 
 
 function t7(){
@@ -69,12 +70,13 @@ function t7(){
 	var reg = /^lisi$/;//匹配输入的名字是不是lisi
 	alert(reg.exec(cv));
 
-} 
+}
 	</script>
 	<style type="text/css">
 		textarea{
 			width: 400px;
-			height: 200px; 
+			height: 200px;
+			
 		}
 	</style>
 </head>
