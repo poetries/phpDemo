@@ -16,7 +16,6 @@
  	//id选择器 class选择器 元素选择器  *号选择器
  	$('#p1').css('color','red');
  	$('.p2').css('color','blue');
- 	$('#test1+p').css('background','green');//div+p 选择 <div> 元素之后紧跟的每个 <p> 元素
  	//$('*').css('border','2px solid yellow');//*选择器 选择所有的元素 不推荐
 
  	//多重选择器
@@ -27,9 +26,11 @@
  	 //层次选择器
  	 //1、E F 选择E元素所有的后代元素
  	 //2、E>F 选择E元素的子元素 子选择器
- 	 //3、E+next 选择E元素后的紧邻的兄弟元素
- 	 //4、E~siblings 选择E元素后的所有兄弟元素
+ 	 //3、E+next 选择E元素后的紧邻的兄弟元素  相当于jquery中方法 .next()
+ 	 //4、E~siblings 选择E元素后的所有兄弟元素 相当于jquery中方法.nextAll()
+ 	 
  	 $('#test span').css('color','red');
+ 	 $('#test1+p').css('background','green');//div+p 选择 <div> 元素之后紧跟的每个 <p> 元素
  });
 
 
