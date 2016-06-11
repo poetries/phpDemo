@@ -48,8 +48,27 @@
 
 $(function(){
 
+// $('p').addClass('bgred').addClass('white');
+// $('p').addClass('bgred white');//放两个样式 空格隔开
+// $('p').removeClass('white').removeClass('bgred');
+// $('p').removeClass('white bgred');
+
+//toggleClass()切换样式
+/*$('p').click(function(){
+	$(this).toggleClass('bgred white');
+});
+*/
+
+//hasclass()判断是否有样式
 
 
+$('p').click(function(){
+	if($(this).hasClass('bgred white')){//返回一个布尔值 true false
+	$(this).removeClass('bgred');
+}else{
+	$(this).addClass('bgred');
+}
+});
 
 
 
@@ -57,27 +76,18 @@ $(function(){
 
 
 
-
-
 	</script>
-
 	<style type="text/css">
-		.a{
+		.bgred{
 			background: red;
 		}
-		.b{
-			background: blue;
-		}
-		.aa{
+		.white{
 			color: white;
 		}
-
-
 	</style>
+
 </head>
 <body>
-	
-
-	<a class="a aa" href="#">a标签</a>
+<p class="bgred white">p标签</p>
 </body>
 </html>
