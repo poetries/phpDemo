@@ -54,8 +54,13 @@ $('input').blur(function(){
 */
 
 //select
-$('input').select()
+// $('input').select(function(){
+// 	$('span').show();
+// });	
 
+$('input[type=password]').select(function(){
+	$('span').show();
+});	
 
 
 });
@@ -65,7 +70,8 @@ $('input').select()
 </head>
 <body>
 	<form action="">
-		<input type="text" value="12" name="">
+	<input type="password" name="" id="" value="111">
+		<input type="text" value="12" name="" value='222'>
 		<!-- <input type="file" value="12" name=""> -->
 		<span style="display: none">333</span>
 
