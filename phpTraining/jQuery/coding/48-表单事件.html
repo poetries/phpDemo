@@ -58,10 +58,15 @@ $('input').blur(function(){
 // 	$('span').show();
 // });	
 
-$('input[type=password]').select(function(){
+//password
+// $('input[type=password]').select(function(){//去掉[type=password]也能选中password
+// 	$('span').show();
+// });	
+
+//textarea
+$('textarea').select(function(){
 	$('span').show();
 });	
-
 
 });
 
@@ -74,6 +79,7 @@ $('input[type=password]').select(function(){
 		<input type="text" value="12" name="" value='222'>
 		<!-- <input type="file" value="12" name=""> -->
 		<span style="display: none">333</span>
+		<textarea cols="5" rows="10">44655746</textarea>
 
 	</form>
 </body>
