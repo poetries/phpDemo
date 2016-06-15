@@ -64,9 +64,16 @@ $('input').blur(function(){
 // });	
 
 //textarea
-$('textarea').select(function(){
-	$('span').show();
-});	
+// $('textarea').select(function(){
+// 	$('span').show();
+// });	
+
+//表单验证经常用到submit
+$('#sub').submit(function(event) {
+	/* Act on the event */
+	alert('提交成功');
+});
+
 
 });
 
@@ -74,13 +81,12 @@ $('textarea').select(function(){
 	</script>
 </head>
 <body>
-	<form action="">
-	<input type="password" name="" id="" value="111">
-		<input type="text" value="12" name="" value='222'>
-		<!-- <input type="file" value="12" name=""> -->
+	<form action="http://www.imooc.com/" id="sub" method="GET">
+	<input type="password" name="password" >
+		<input type="text"  name="username" >
 		<span style="display: none">333</span>
 		<textarea cols="5" rows="10">44655746</textarea>
-
+		<input type="submit" value="提交">
 	</form>
 </body>
 </html>
