@@ -40,7 +40,7 @@ $(function(){
 });*/
 
 	//bind()绑定事件
-	$('p').bind('click',function(){
+/*	$('p').bind('click',function(){
 		alert($(this).text());
 	});
 
@@ -49,7 +49,32 @@ $(function(){
 	});
 
 	//unblind()移除事件
-	$('p').unbind('click');
+	$('p').unbind('click mouseover');//可以同时移除几个方法*/
+
+/*	$('p').one('click',function(){//one只执行一次事件
+		alert($(this).text());
+	});
+*/
+
+	//事件委托
+	
+
+/*$('body').delegate('p','click',function(){
+	$('body').append('<p>新p标签</p>');
+});
+*/
+
+/*$('p').bind('click',function(){//新增的标签要想绑定事件必须要用delegate
+	$('body').append('<p>新p标签</p>');*/
+
+
+	$('p').on('click',function(){//
+		$('body').append('<p>新p标签</p>');
+});
+
+
+
+
 });
 
 
