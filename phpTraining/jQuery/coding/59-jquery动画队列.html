@@ -45,6 +45,13 @@ $('#dequeue').click(function(){
 	$('div').dequeue();
 });
 
+$('#finish').click(function(){
+	$('div').finish();
+});
+
+$('#delay').click(function(){
+	$('p').slideUp(1000).delay(1000).fadeIn(500);//delay延迟动画 其他的不呢能延迟
+});
 
 });
 
@@ -60,9 +67,15 @@ $('#dequeue').click(function(){
 			position: absolute;
 			left: 10px;
 			top: 40px;
+			/*display: none;*/
 			
 			
 			
+			p{
+				width: 500px;
+				height:500px;
+				background: yellow;
+			}
 		}
 	</style>
 </head>
@@ -71,6 +84,9 @@ $('#dequeue').click(function(){
 	<input id = 'stop' type="button" value="stop">
 	<input id = 'dequeue' type="button" value="dequeue">
 	<input id = 'finish' type="button" value="finish">
+	<input id = 'delay' type="button" value="测试delay">
 	<div></div>
+
+	<p>pppppppppp</p>
 </body>
 </html>
