@@ -29,13 +29,27 @@
 	$(function(){
 
 		$('input[type=button]').click(function(){
-			$('.load').load('ajaxtest.txt');
+			//$('.load').load('ajaxtest.txt');//加一个参数能解决IE下面的缓存问题 ajaxtest.txt？date='+Math.random()'
+			
+
+			//test1 test2 div里面的内容都加载过来  
+			// $('.load').load("testajax.html?date='+Math.random()'");
+			
+			//test1 只加载test1写法
+			$('.load').load("testajax.html?date='+Math.random()+' .test1");
 		});
 
 
 	});
 
 		</script>
+		<style type="text/css">
+			.load{
+				width: 300px;
+				height: 300px;
+				border: 1px  solid  red;
+			}
+		</style>
 
 </head>
 <body>
