@@ -32,6 +32,12 @@
 					}
 				});
 			});
+			//ajax执行提示
+			$(document).ajaxStart(function(){
+				$('#loading').show();
+			}).ajaxStop(function(){
+				$('#loading').hide();
+			});
 
 		});
 	</script>
@@ -39,6 +45,7 @@
 <body>
 	<input type="button" value="获取信息">
 	<div id="info">
+	<img src="./src/img/ajax-loader.gif" alt="" id="loading" style="display: none">
 		<ul></ul>
 	</div>
 </body>
