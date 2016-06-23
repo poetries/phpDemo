@@ -1,0 +1,104 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第三课-单张图的图片轮播</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 20:14:16
+ */
+
+$(function(){
+
+ var oul = $('.wrap ul');
+ var numLi = $('.wrap ol li'); 
+ var ali = $('.wrap ul').eq(0).width();
+ alert(ali);//
+ numLi.click(function(){
+ 	$(this).addClass('current').siblings().removeClass();
+ 	// oul.animate({
+ 	// 	//json格式
+ 	// 	'left':
+ 	// },500)
+ });
+
+
+
+
+
+
+
+});
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0 auto;
+		}
+		body{margin: 50px;}
+		.wrap ul li{
+			list-style: none;
+			float: left;
+			width: 500px;
+		}
+		.wrap{
+			width: 500px;
+			height: 350px;
+			border: 3px solid red;
+			overflow: hidden;
+			position: relative;
+		}
+		.wrap ul{
+			width:  2000px;
+			/*要使某个元素具有移动属性 必须有position*/
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.wrap ol{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+
+		.wrap ol li{
+			float: left;
+			width: 16px;
+			height: 16px;
+			list-style: none;
+			line-height: 16px;
+			text-align: center;
+			border: 1px solid yellow;
+			background: #000;
+			color: white;
+			margin-right: 3px;
+			cursor: pointer;
+		}
+		.wrap ol li.current{
+			background: #fff;
+			color: #000;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div class="wrap">
+		<ul>
+			<li><img src="../src/img/lession3/1.jpg" alt=""></li>
+			<li><img src="../src/img/lession3/2.jpg" alt=""></li>
+			<li><img src="../src/img/lession3/3.jpg" alt=""></li>
+			<li><img src="../src/img/lession3/4.jpg" alt=""></li>
+		</ul>
+		<ol class="current">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+
+</body>
+</html>
