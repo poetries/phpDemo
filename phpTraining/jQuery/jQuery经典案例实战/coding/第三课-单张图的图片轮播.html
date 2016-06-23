@@ -19,12 +19,18 @@ $(function(){
  var _now = 0;//这里是控制数字样式的计数器
  var _now2 = 0;//这个是控制图片运动距离的计数器
  var timeId = null;
+ var aimg = $('.wrap ul img');
+ var op = $('.wrap p');
 
  // alert(ali);//500
  numLi.click(function(){
  	var index = $(this).index();
  	_now = index;
  	_now2 = index;
+
+ 	var imgAlt = aimg.eq(_now).attr('alt');
+ 	op.html(imgAlt);
+
  	$(this).addClass('current').siblings().removeClass();
  	oul.animate({
  		//json格式
@@ -44,6 +50,10 @@ $(function(){
   	_now2++;
 
   	$('.wrap ul li').eq(_now).addClass('current').siblings().removeClass();
+
+  	var imgAlt = aimg.eq(_now).attr('alt');
+  	// alert( imgAlt);
+  	op.html(imgAlt);
   	oul.animate({'left':-aliWidth*_now2},500,function(){
   		//回调函数 运动完后执行
   		
@@ -61,12 +71,19 @@ $(function(){
 
 
 //鼠标移入移出
-$('.wrap').mouseover(function(){
+/*$('.wrap').mouseover(function(){
 	clearInterval(timeId);
 }).mouseout(function(){
 	timeId = setInterval(slide,2000);
 });
+*/
+//hover合并 鼠标移入 移出
 
+$('.wrap').hover(function(){
+	clearInterval(timeId);
+},function(){
+	timeId = setInterval(slide,2000);
+});
 
 
 });
@@ -74,7 +91,7 @@ $('.wrap').mouseover(function(){
 	<style type="text/css">
 		*{
 			padding: 0;
-			margin: 0 auto;
+			margin: 0;
 		}
 		body{margin: 50px;}
 		.wrap ul li{
@@ -120,6 +137,18 @@ $('.wrap').mouseover(function(){
 			background: #fff;
 			color: #000;
 		}
+		.wrap p.intro{
+			height: 30px;
+			line-height: 30px;
+			width: 400px;
+			background: rgba(0,0,0,0.5);
+			color: #fff;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+	/*		opacity: 0.5;
+			filter: alpha(opacity=50);/*兼容IE6*/*/
+		}
 	</style>
 
 </head>
@@ -127,10 +156,10 @@ $('.wrap').mouseover(function(){
 	
 	<div class="wrap">
 		<ul>
-			<li><img src="../src/img/lession3/1.jpg" alt=""></li>
-			<li><img src="../src/img/lession3/2.jpg" alt=""></li>
-			<li><img src="../src/img/lession3/3.jpg" alt=""></li>
-			<li><img src="../src/img/lession3/4.jpg" alt=""></li>
+			<li><img src="../src/img/lession3/1.jpg" alt="第1张图片">第1张图片</li>
+			<li><img src="../src/img/lession3/2.jpg" alt="第2张图片">第2张图片</li>
+			<li><img src="../src/img/lession3/3.jpg" alt="第3张图片">第3张图片</li>
+			<li><img src="../src/img/lession3/4.jpg" alt="第4张图片">第4张图片</li>
 		</ul>
 		<ol class="current">
 			<li>1</li>
@@ -138,6 +167,8 @@ $('.wrap').mouseover(function(){
 			<li>3</li>
 			<li>4</li>
 		</ol>
+
+			<p class="intro">第1张图片</p>
 	</div>
 
 </body>
