@@ -12,11 +12,11 @@
 	 */
 
 	$(function(){
-
+		//调用插件
 		$('.tab').tab({//重写插件采参数配置
 			eventType:'mouseover',
 			tabNav:'.tabNav1>li',
-		});//调用插件
+		}).find('.tabNav1>li').css('background', 'red');
 
 	});
 		</script>

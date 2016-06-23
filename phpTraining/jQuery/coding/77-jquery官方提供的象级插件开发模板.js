@@ -8,5 +8,7 @@
 		this.each(function(){
 			//实现功能的代码
 		});
+
+		return this;
 	}
 })(jQuery);

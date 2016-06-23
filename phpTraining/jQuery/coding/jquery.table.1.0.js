@@ -48,5 +48,7 @@
 
 
 		});
+		//返回一个对象
+		return this;
 	}
 })(jQuery);  

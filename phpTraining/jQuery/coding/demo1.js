@@ -6,5 +6,6 @@ $.yongxuan={
 			'left':($(window).width()-div.width())/2,
 			'position':'absolute'
 		});
+		return obj;
 	}
 }
