@@ -19,7 +19,12 @@
 
 $(function(){
 
-	$('#table1').table();
+	$('#table1').table({//这里的属性重写了插件的属性
+		evenRowClass:'evenRow1',
+		oddRowClass:'oddRow1',
+		currentClass:'currentRow1',
+		eventType1:'click'
+	});
 
 
 });
@@ -37,9 +42,9 @@ $(function(){
 			border: 1px solid red;
 			text-align: center;
 		}
-		.evenRow{background: #09f; } /*偶数*/
-		.oddRow{background: #38a38a; }
-		.currentRow{background: yellow;}/*当前*/
+		.evenRow1{background: #09f; } /*偶数*/
+		.oddRow1{background: #38a38a; }
+		.currentRow1{background: yellow;}/*当前*/
 	</style>
 </head>
 <body>
