@@ -19,48 +19,65 @@ $(function(){
 	var oul = $('.wrap ul');
 	var oulHtml = oul.html();
 	var timeId = null;
+
+
+
+	var speed = 2;
 	oul.html(oulHtml+oulHtml);
+
 	// alert(oul.html());
 	// oul.append(outhtml);不推荐 因为是经过一个方法来执行的 肯定不够拼接字符的效率好
 
+
+	//动态获取ul的宽度
+	
+	var ali = $('.wrap ul li');
+	var aliWidth = ali.eq(0).width();//eq(0)第一个li 每个li的宽度都一样 所以取第一个
+	//var aliSize = ali.size();//获取li的数量 .size()方法从jQuery 1.8开始被废弃。使用.length属性代替
+	var alilength = ali.length;
+	var ulWidth = aliWidth*alilength;//ul宽度
+	// alert(ulWidth);//1600px
+	oul.width(ulWidth);
+
 	//setInterval 每个一段时间执行该函数的代码
-	timeId = setInterval(function(){
+	function slider(){
 
-//向左滚动
-/*		if(oul.css('left')=='-800px'){
-			oul.css('left',0);
-		}
-		oul.css('left','+=-2px');//用到累加的概念*/
+	
+			if(speed<0){//向左滚动
+					if(oul.css('left')== -ulWidth/2+'px'){
+						oul.css('left',0);
+					}
+					oul.css('left','+=-2px');//用到累加的概念
+				}else{
+					//向右滚动
+					if(oul.css('left')=='0px'){
+								oul.css('left',-ulWidth/2+'px');
+							}
 
-		//向右滚动
-		if(oul.css('left')=='0px'){
-					oul.css('left','-800px');
+					oul.css('left','+='+speed+'px');
 				}
 
-		oul.css('left','+=2px');
 
+			//鼠标移动上去停止
+			$('.wrap').mouseover(function(event) {
+				clearInterval(timeId);
+			});
 
-
-		//鼠标移动上去停止
-		$('.wrap').mouseover(function(event) {
-			clearInterval(timeId);
-		});
-
-	},30);
+		}
+	timeId = setInterval(slider,30);
 
 	//鼠标离开
 	
 	$('.wrap').mouseout(function(){
-			timeId = setInterval(function(){
+			timeId = setInterval(slider,30);
+	});
 
-				//向右滚动
-				if(oul.css('left')=='0px'){
-							oul.css('left','-800px');
-						}
+	$('.goLeft').click(function(){
+		speed = -2;
+	});
 
-				oul.css('left','+=2px');
-
-			},30);
+	$('.goRight').click(function(){
+		speed = 2;
 	});
 
 });
@@ -85,12 +102,16 @@ $(function(){
 	</style>
 </head>
 <body>
+<a href="javascript:;" class="goLeft">向左走</a>
+<a href="javascript:;" class="goRight">向右走</a>
 	<div class="wrap">
 		<ul>
 			<li><img src="../src/img/1.jpg" alt=""></li>
 			<li><img src="../src/img/2.jpg" alt=""></li>
 			<li><img src="../src/img/3.jpg" alt=""></li>
 			<li><img src="../src/img/4.jpg" alt=""></li>
+			<li><img src="../src/img/5.jpg" alt=""></li>
+			<li><img src="../src/img/6.jpg" alt=""></li>
 		</ul>
 	</div>
 </body>
