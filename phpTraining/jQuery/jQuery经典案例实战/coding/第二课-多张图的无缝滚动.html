@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第二课——多张图的无缝滚动</title>
+	<script type="text/javascript" src="../src/js/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+/**
+ * @CreateBy:   SublimeText3
+ * @Author:     poetries
+ * @DateTime:	2016-06-23 18:00:02
+ */
+
+$(function(){
+
+});
+	</script>
+	<style type="text/css">
+		*{padding: 0;margin: 0}
+		li{list-style: none;}
+		body{margin: 50px;}
+		.wrap ul{
+			overflow: hidden;
+			_height:1px;
+			width: 800px;
+		}
+		.wrap ul li {
+			float: left;
+		}
+		.wrap{border: 3px solid red;width: 800px;height: 200px} /*每张图片都是200*200*/
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li><img src="../src/img/1.jpg" alt=""></li>
+			<li><img src="../src/img/2.jpg" alt=""></li>
+			<li><img src="../src/img/3.jpg" alt=""></li>
+			<li><img src="../src/img/4.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
