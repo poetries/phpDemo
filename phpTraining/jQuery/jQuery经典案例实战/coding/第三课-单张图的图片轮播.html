@@ -14,19 +14,58 @@ $(function(){
 
  var oul = $('.wrap ul');
  var numLi = $('.wrap ol li'); 
- var ali = $('.wrap ul').eq(0).width();
- alert(ali);//
+ var ali = $('.wrap ul li'); 	
+ var aliWidth = $('.wrap ul li').eq(0).width();
+ var _now = 0;//这里是控制数字样式的计数器
+ var _now2 = 0;//这个是控制图片运动距离的计数器
+ var timeId = null;
+
+ // alert(ali);//500
  numLi.click(function(){
+ 	var index = $(this).index();
+ 	_now = index;
+ 	_now2 = index;
  	$(this).addClass('current').siblings().removeClass();
- 	// oul.animate({
- 	// 	//json格式
- 	// 	'left':
- 	// },500)
+ 	oul.animate({
+ 		//json格式
+ 		'left':-aliWidth*index
+ 	},500);
  });
+ function slide(){
+  	if(_now == numLi.length-1){
+  		ali.eq(0).css({
+  			'position':'relative',//用了relative 第一个图片的位置还保留
+  			'left':oul.width()//把第一张图片移动到最后
+  		});
+  		_now = 0;
+  	}else{
+  		_now++;
+  	}
+  	_now2++;
+
+  	$('.wrap ul li').eq(_now).addClass('current').siblings().removeClass();
+  	oul.animate({'left':-aliWidth*_now2},500,function(){
+  		//回调函数 运动完后执行
+  		
+  		if(_now == 0){
+  			ali.eq(0).css('position','static');//去掉relative属性);
+  			oul.css('left', 0);
+  			_now2 = 0;
+  		}
+  	});
+
+  }
+
+ timeId = setInterval(slide,2000);
 
 
 
-
+//鼠标移入移出
+$('.wrap').mouseover(function(){
+	clearInterval(timeId);
+}).mouseout(function(){
+	timeId = setInterval(slide,2000);
+});
 
 
 
@@ -47,6 +86,7 @@ $(function(){
 			width: 500px;
 			height: 350px;
 			border: 3px solid red;
+			cursor: pointer;
 			overflow: hidden;
 			position: relative;
 		}
