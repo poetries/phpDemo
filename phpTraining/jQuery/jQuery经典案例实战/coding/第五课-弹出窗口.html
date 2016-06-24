@@ -14,6 +14,26 @@ $(function(){
  var popWindow = $('.popWindow');
  var Close = $('.popWindow h3 span');
 
+ //left的值等于浏览器可视区域的宽度除以2减去弹出窗口的宽度的一半
+ //top的值等于浏览器可视区域的高度除以2减去弹出窗口的高度的一半
+ //$(window).height()获取浏览器可视区域的高度
+ //$(window).width()获取浏览器可视区域的宽度
+
+var browserWidth = $(window).width();
+var browserHeight = $(window).height();
+// alert(browserHeight);
+
+//弹出窗口的宽度和高度innerWidth() innerHeight()获取到了有padding值的宽度和高度 
+//innerWidth()计算宽度只是包括padding 不包括border margin
+//outWidth()包括padding border 和选择性的margin  如果写true 就包括了margin
+//在项目中一般用outWidth()加一个参数 来获取元素的真实宽度
+// var popWindowWidth = popWindow.innerWidth();
+// var popWindowheight = popWindow.innerHeight();
+
+var popWindowWidth = popWindow.outerWidth(true);
+var popWindowheight = popWindow.outerHeight(true);
+
+
  Btn.click(function() {
  	popWindow.show().animate({
  		'left': '300px',
