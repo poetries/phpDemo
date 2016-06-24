@@ -13,8 +13,10 @@
 $(function(){
 
 var menu = $('.menu');
-menu.mouseover(function(){
+menu.hover(function(){
 	$(this).children('ul').show();
+},function(){
+	$(this).children('ul').hide();
 });
 
 });
@@ -47,14 +49,17 @@ menu.mouseover(function(){
 			<li class="menuLevel2 menu">
 				<span>二级菜单</span>
 				<ul class="hide">
-					<li class="menuLevel2 menu">
+					<li class="menuLevel3 menu">
 						<span>三级菜单</span>
+						<ul class="hide">
+							<li class="menuLevel4 menu">
+								<span>四级菜单</span>
+								<ul class="hide">
+									<li class="menuLevel5 menu"><span>五级菜单</span></li>
+								</ul>
+							</li>
+						</ul>
 					</li>
-					<ul class="hide">
-						<li>
-							<span>四级菜单</span>
-						</li>
-					</ul>
 				</ul>
 			</li>
 		</ul>
