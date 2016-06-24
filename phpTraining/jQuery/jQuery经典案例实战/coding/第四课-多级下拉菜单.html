@@ -12,12 +12,53 @@
 
 $(function(){
 
-
+var menu = $('.menu');
+menu.mouseover(function(){
+	$(this).children('ul').show();
+});
 
 });
 	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			margin: 50px;
+		}
+		li{
+			list-style: none;
+		}
+		.hide{
+			display: none;
+		}
+		.menu{
+			cursor: pointer;
+		}
+		
+	</style>
 </head>
 <body>
-
+<ul>
+	<li class="menuLevel menu">
+		<span>一级菜单</span>
+		<ul class="hide">
+			<li class="menuLevel2 menu">
+				<span>二级菜单</span>
+				<ul class="hide">
+					<li class="menuLevel2 menu">
+						<span>三级菜单</span>
+					</li>
+					<ul class="hide">
+						<li>
+							<span>四级菜单</span>
+						</li>
+					</ul>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
 </body>
 </html>
