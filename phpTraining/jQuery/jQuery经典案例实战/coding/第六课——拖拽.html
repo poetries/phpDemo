@@ -21,8 +21,19 @@
 	<script type="text/javascript">
 		$(function(){
 
-			$(document).click(function(){
-				
+			$('div').mousedown(function(){
+				$(document).mousemove(function(e){
+					// alert(e.pageX);
+					var x = e.pageX;
+					var y = e.pageY;
+					$('div').css({
+						'left':x+'px',
+						'top':y+'px'
+					});
+				});
+				$(document).mouseup(function(){
+					$(document).unbind('mousemove');
+				});
 			});
 		});
 	</script>
