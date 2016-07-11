@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -28,9 +29,8 @@ $(function(){
 	// alert(oul.html());
 	// oul.append(outhtml);不推荐 因为是经过一个方法来执行的 肯定不够拼接字符的效率好
 
-
 	//动态获取ul的宽度
-	
+
 	var ali = $('.wrap ul li');
 	var aliWidth = ali.eq(0).width();//eq(0)第一个li 每个li的宽度都一样 所以取第一个
 	//var aliSize = ali.size();//获取li的数量 .size()方法从jQuery 1.8开始被废弃。使用.length属性代替
@@ -42,7 +42,7 @@ $(function(){
 	//setInterval 每个一段时间执行该函数的代码
 	function slider(){
 
-	
+
 			if(speed<0){//向左滚动
 					if(oul.css('left')== -ulWidth/2+'px'){
 						oul.css('left',0);
@@ -67,7 +67,7 @@ $(function(){
 	timeId = setInterval(slider,30);
 
 	//鼠标离开
-	
+
 	$('.wrap').mouseout(function(){
 			timeId = setInterval(slider,30);
 	});
